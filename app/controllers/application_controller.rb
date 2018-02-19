@@ -12,7 +12,7 @@ class ApplicationController < Sinatra::Base
 
   post '/login' do
     @user = User.find_by(username: params[:username])
-    # stuff to check if there's a match 
+    # stuff to check if there's a match
   end
 
   get '/account' do
@@ -25,4 +25,3 @@ class ApplicationController < Sinatra::Base
 
 
 end
-
