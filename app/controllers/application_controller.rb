@@ -14,6 +14,12 @@ class ApplicationController < Sinatra::Base
     @user = User.find_by(username: params[:username])
     # stuff to check if there's a match
     binding.pry
+    if @user = nil
+      erb :error
+    else
+      session[:id] = @user.id
+      erb :account
+    end
   end
 
   get '/account' do
