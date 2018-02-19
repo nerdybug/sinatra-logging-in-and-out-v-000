@@ -13,7 +13,7 @@ class ApplicationController < Sinatra::Base
   post '/login' do
     @user = User.find_by(username: params[:username])
     # stuff to check if there's a match
-    binding.pry
+    # binding.pry
     if @user = nil
       erb :error
     else
